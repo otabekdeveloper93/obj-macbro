@@ -70,7 +70,6 @@ arr.forEach(item =>{
             imgSlidebtn.appendChild(changeImgBtn);
 
             changeImgBtn.addEventListener('click', ()=>{
-                changeImgBtn.classList.add('active-img');
                 transform = idx;
                 imgslide.style.transform = `translate(${-transform * 20}%)`;
             })
@@ -80,7 +79,53 @@ arr.forEach(item =>{
     })
 })
 
+// modal section start
+const modalFullScreen = document.querySelector('.modal-fullscreen');
+const modalContainer = document.querySelector('.modal-container');
+const modalIndicator = document.querySelector('.modal_indicator');
+const closeModal = document.querySelector('.close_modal');
+const openModal = document.querySelector('.btn_modal');
 
+openModal.addEventListener('click', ()=>{
+    modalFullScreen.classList.remove('d-none');
+});
+closeModal.addEventListener('click', ()=>{
+    modalFullScreen.classList.add('d-none');
+});
+
+let changeModal = 0;
+
+arr.forEach(item =>{
+    item.rasm.forEach((slide) =>{
+        let modalSlider = document.createElement('div');
+        modalSlider.className = "modal-slider";
+        let modalSlideBtn = document.createElement('div');
+        modalSlideBtn.className = 'modal_btn_slide';
+        slide.forEach((imgs,idx) =>{
+            let modalItem = document.createElement('div');
+            modalItem.className = 'modal-item';
+            modalItem.innerHTML = `
+            <img src=${imgs}>
+            `;
+            let changeImgBtn = document.createElement('button');
+            changeImgBtn.innerHTML = `
+            <img src=${imgs} width="100%" height="100%">
+            `
+            changeImgBtn.addEventListener('click', ()=>{
+                changeModal = idx;
+                modalSlider.style.transform = `translate(${-changeModal * 500}px)`;
+            })
+            modalSlider.appendChild(modalItem);
+            modalSlideBtn.appendChild(changeImgBtn);
+        })
+        modalContainer.appendChild(modalSlider);
+        modalIndicator.appendChild(modalSlideBtn)
+    })
+})
+let slideModal = document.querySelectorAll('.modal-slider');
+let btnModal = document.querySelectorAll('.modal_btn_slide');
+
+// title section
 arr.forEach(item =>{
     titleSection.innerHTML = `
         <h1 class="mac-title"><span>${item.name}</span> <br> <span class="chip">M1</span>/<span class="ram-hajmi">${item.ram[0]}</span>/<span class="xotira-hajmi">${item.xotira[0]}</span> <span class="desktop-color">${item.rang[0]}</span></h1>
@@ -171,11 +216,18 @@ btnGold.addEventListener("click", ()=>{
 
     sliderImages[0].classList.remove('d-none');
     btnImagesSlider[0].classList.remove('d-none');
+    slideModal[0].classList.remove('d-none');
+    btnModal[0].classList.remove('d-none');
 
     sliderImages[1].classList.add('d-none');
     sliderImages[2].classList.add('d-none');
     btnImagesSlider[1].classList.add('d-none');
     btnImagesSlider[2].classList.add('d-none');
+    slideModal[1].classList.add('d-none');
+    btnModal[1].classList.add('d-none');
+    slideModal[2].classList.add('d-none');
+    btnModal[2].classList.add('d-none');
+    
 });
 
 btnSilver.addEventListener("click", ()=>{
@@ -187,11 +239,17 @@ btnSilver.addEventListener("click", ()=>{
 
     sliderImages[1].classList.remove('d-none');
     btnImagesSlider[1].classList.remove('d-none');
+    slideModal[1].classList.remove('d-none');
+    btnModal[1].classList.remove('d-none');
 
     sliderImages[0].classList.add('d-none');
     sliderImages[2].classList.add('d-none');
     btnImagesSlider[0].classList.add('d-none');
     btnImagesSlider[2].classList.add('d-none');
+    slideModal[0].classList.add('d-none');
+    btnModal[0].classList.add('d-none');
+    slideModal[2].classList.add('d-none');
+    btnModal[2].classList.add('d-none');
 });
 
 btnGray.addEventListener("click", ()=>{
@@ -203,11 +261,17 @@ btnGray.addEventListener("click", ()=>{
 
     sliderImages[2].classList.remove('d-none');
     btnImagesSlider[2].classList.remove('d-none');
+    slideModal[2].classList.remove('d-none');
+    btnModal[2].classList.remove('d-none');
 
     sliderImages[1].classList.add('d-none');
     sliderImages[0].classList.add('d-none');
     btnImagesSlider[1].classList.add('d-none');
     btnImagesSlider[0].classList.add('d-none');
+    slideModal[1].classList.add('d-none');
+    btnModal[1].classList.add('d-none');
+    slideModal[0].classList.add('d-none');
+    btnModal[0].classList.add('d-none');
 });
 
 
