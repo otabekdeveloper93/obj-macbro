@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@200;300;400;500;600&family=Roboto:wght@100;300;400;500;700;900&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+header{
+    height: 100vh;
+}
+.padding-60{
+    padding-right: 60px;
+}
+
+body{
+    position: relative;
+}
+.mac-section{
+    padding-top: 50px;
+    height: 90vh;
+}
+.img-carusel{
+    position: relative;
+}
+.imgcontent{
+    position: relative;
+    margin: 0 auto;
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.img-slider{
+    position: absolute;
+    display: flex;
+    width: 2250px;
+    height: 80%;
+}
+.images{
+    width: 450px;
+    height: 100%;
+}
+.btn_modal{
+    position: absolute;
+    right: 10%;
+    bottom: 30%;
+    cursor: pointer;
+}
+.img-carusel-indicator{
+    position: absolute;  
+    bottom: 60px;
+    width: 100%;
+    padding: 0 20px;
+}
+.btn-images{
+    position: absolute;
+    width: 80%;
+    display: flex;
+    top: 0;
+    left: 0;
+}
+.img-category{
+    width: 17%;
+    border: none;
+    outline: none;
+    margin: 0 10px;
+    overflow: hidden;
+}
+.img-category.active-img{
+    border-radius: 10px;
+    border: 2px solid #555;
+}
+/* mac title */
+
+.title-sec{
+    position: relative;
+    overflow-y: auto;
+    height: 80vh;
+}
+
+.mac-title{
+    font-weight: 600;
+    font-size: 45px;
+}
+.group-btn{
+    margin-top: 30px;
+}
+.group-btn p{
+    margin: 0;
+    font-weight: 700;
+    font-size: 15px;
+}
+.group-btn button{
+    background-color: transparent;
+    outline: none;
+    border: 2px solid #ccc;
+    padding: 10px 50px;
+    margin: 6px 3px;
+    border-radius: 10px;
+}
+
+.group-btn .btn-rang{
+    width: 210px;
+
+}
+.group-btn .btn-rang .ranglar h1{
+    margin: 0;
+    text-align: center;
+}
+.group-btn .btn-rang .ranglar .rang-icon span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.rang-icon span.active-yellow{
+    background-color: peru;
+}
+.rang-icon span.active-silver{
+    background-color: silver;
+}
+.rang-icon span.active-gray{
+    background-color: gray;
+}
+.group-btn .btn-rang .ranglar p{
+    font-size: 12px;
+    font-weight: 600;
+}
+.product_costs{
+    display: flex;
+    width: 150px;
+    height: 42px;
+    margin: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.product_costs button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    width: 32%;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product_costs .input_count{
+    width: 35%;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.product_costs .input_count span{
+    display: block;
+    text-align: center;
+    line-height: 40px;
+}
+
+.product-price{
+    margin-top: 30px;
+    width: 100%;
+    height: 60px;
+}
+.product-price h6{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.product-price p{
+    font-size: 1.5rem;
+}
+.savatcha{
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 10px 0;
+}
+.taqqoslash{
+    width: 100%;
+    color: var(--bs-primary);
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+.podilitsa{
+    position: absolute;
+    top: 0px;
+    right: 15%;
+    cursor: pointer;
+}
+
+.d-none{  
+    display: none;
+}
+.group-btn .active_btn{
+    border: 2px solid var(--bs-primary);
+}
